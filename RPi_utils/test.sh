@@ -4,6 +4,7 @@ lloytron="7778920"
 cheapas="-2086369837"
 while true;  do
 	scan=`./RFSniffer`
+	echo $scan
 		if [ "$scan" = "$lloytron" ]; then
 			echo "Good Read - lloytron"
 			echo "Your code is " $scan
