@@ -1,7 +1,7 @@
 #!/bin/sh
 
 while true;  do
-	valid="457624"
+	valid="7778920"
 	scan=`./RFSniffer`
 		if [ "$scan" = "$valid" ]; then
 			echo "Good Read"
