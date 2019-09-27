@@ -7,7 +7,8 @@ COPY ./rc-switch /app/rc-switch
 
 RUN apt-get update -y
 RUN apt-get install wiringpi -y
-RUN apt-get install make
+RUN apt-get install make -y
+RUN apt-get install g++ -y
 
 WORKDIR /app/RPi_utils
 RUN make
