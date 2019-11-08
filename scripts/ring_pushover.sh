@@ -4,10 +4,10 @@ SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`
 
 lloytron="7778920"
-cheapas="-2086369837"
+cheapas_doorbell="-2086369837"
 cd $SCRIPTPATH
 while true;  do
-	scan=`./RFSniffer`
+	scan=`./RPi_utils/RFSniffer`
 
 	if [ "$scan" = "$lloytron" ]; then
 		timenow=`date`

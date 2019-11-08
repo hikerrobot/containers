@@ -2,15 +2,16 @@ FROM raspbian/stretch
 
 WORKDIR /app
 
-ADD ./RPi_utils /app/RPi_utils
-COPY ./rc-switch /app/rc-switch
-
-RUN apt-get update -y
+RUN apt-get update -y \
+&& apt-get install git -y
+RUN git clone --recursive https://github.com/ninjablocks/433Utils.git
 RUN apt-get install wiringpi -y
 RUN apt-get install make -y
 RUN apt-get install g++ -y
 
+COPY ./scripts/ring_pushover.sh /app/
+
 WORKDIR /app/RPi_utils
 RUN make
 
-CMD ["sudo", "sh", "/app/RPi_utils/ring_pushover.sh"]
+CMD ["sudo", "sh", "/app/ring_pushover.sh"]
