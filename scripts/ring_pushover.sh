@@ -1,11 +1,7 @@
 #!/bin/sh
 
-SCRIPT=`realpath $0`
-SCRIPTPATH=`dirname $SCRIPT`
-
-cd $SCRIPTPATH
 while true;  do
-	scan=`./RPi_utils/RFSniffer`
+	scan=`/app/433Utils/RPi_utils/RFSniffer`
 
 	if [ "$scan" = "$DOORBELL_CODE" ]; then
 		timenow=`date`
