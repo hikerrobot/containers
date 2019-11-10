@@ -12,7 +12,12 @@ RUN apt-get update -y \
 
 COPY ./scripts/ring_pushover.sh /app/
 
-WORKDIR 433Utils/RPi_utils/
+# replace the RFSniffer.cpp with one that exits the loop when receive has taken place.
+# this can be found in the following archive: http://www.securipi.co.uk/433.zip
+# confusingly this file is actually a tar, not a zip.
+COPY ./src/RFSniffer.cpp /app/433Utils/RPi_utils/
+
+WORKDIR /app/433Utils/RPi_utils/
 RUN make
 
 CMD ["sudo", "sh", "/app/ring_pushover.sh"]
