@@ -2,7 +2,9 @@
 
 while true;  do
 	scan=`/app/433Utils/RPi_utils/RFSniffer`
+	#scan=`/home/pi/workspace/433Utils/RPi_utils/RFSniffer`
 
+	echo code = $DOORBELL_CODE
 	if [ "$scan" = "$DOORBELL_CODE" ]; then
 		timenow=`date`
 		echo $timenow " - Good Read :-)"
@@ -14,5 +16,5 @@ while true;  do
 	else
 		echo $timenow " - BAD READ:  discovered code = " $scan
 	fi
-	sleep 5
+	sleep 1
 done
