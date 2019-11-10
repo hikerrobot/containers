@@ -20,4 +20,4 @@ COPY ./src/RFSniffer.cpp /app/433Utils/RPi_utils/
 WORKDIR /app/433Utils/RPi_utils/
 RUN make
 
-CMD ["sudo", "sh", "/app/ring_pushover.sh"]
+ENTRYPOINT ["/bin/bash", "/app/ring_pushover.sh"]
