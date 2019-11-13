@@ -1,6 +1,5 @@
 while true;  do
 	scan=`/app/433Utils/RPi_utils/RFSniffer`
-	#scan=`/home/pi/workspace/433Utils/RPi_utils/RFSniffer`
 
 	if [ "$scan" = "$DOORBELL_CODE" ]; then
 		timenow=`date`
