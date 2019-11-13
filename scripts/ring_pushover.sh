@@ -1,8 +1,8 @@
 while true;  do
 	scan=`/app/433Utils/RPi_utils/RFSniffer`
 
+	timenow=`date`
 	if [ "$scan" = "$DOORBELL_CODE" ]; then
-		timenow=`date`
 		echo $timenow " - Good Read :-)"
 		curl -s \
 		  --form-string "token=$PUSHOVER_TOKEN" \
