@@ -1,5 +1,5 @@
-DOORBELL_CODE=7778920
-PUSHOVER_TOKEN=aastho4zszvsn1aki7968w7kaj8zdq
-PUSHOVER_UID=u7sw6hd7cabawudzqf5347ssq4d2x4
+DOORBELL_CODE=1234567
+PUSHOVER_TOKEN=api token
+PUSHOVER_UID=pushover user id
 PUSHOVER_MSG=bing bong!
 
