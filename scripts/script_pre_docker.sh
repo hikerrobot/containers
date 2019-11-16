@@ -3,16 +3,17 @@
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`
 
-doorbell_code="7778920"
+doorbell_code="your code here"
 cd $SCRIPTPATH
 while true;  do
+	# TODO modify the path as appropriate
 	scan=`./RFSniffer`
 
+	timenow=`date`
 	if [ "$scan" = "$doorbell_code" ]; then
-		timenow=`date`
-		echo $timenow "Good Read - $doorbell_code"
+		echo $timenow "Good Read :-)"
 	else
-		echo "BAD READ:  discovered code = " $scan
+		echo $timenow "BAD READ:  discovered code = " $scan
 	fi
 	sleep 5
 done
