@@ -22,6 +22,8 @@ The Docker run command requires special arguments in order to be able to access 
 
 ## Configuration
 
+The Docker container relies on a environent variable file. A template file is provided in the root of the repo: *docker_env_vars*. You simply need to modify the key values in said file. Note that this template file is referenced in the run_docker.sh script.
+
 At a minimum, you'll need to provide the doorbell code to the Docker container.
 Discovery of this is outside the scope of this file, but [here's](https://github.com/ninjablocks/433Utils/tree/master/RPi_utils) a link to the RFSniffer.
 
