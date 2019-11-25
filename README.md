@@ -9,7 +9,7 @@ You need the following to use this application:-
 * Breadboard, jumper cables and 433mhz receiver.
 
 This repository contains contained from the Ninja blocks 433 Utils git repo.
-It also utilises RCSwitch and requires WiringPi also.
+It also utilises [RCSwitch](https://github.com/sui77/rc-switch) and requires [WiringPi](http://wiringpi.com) also.
 A modified version of the RFSniffer is used, which is inspired by the book Home Automation & Security Projects for Raspberry PI, by Tim Rustige.
 
 ## Building the software
